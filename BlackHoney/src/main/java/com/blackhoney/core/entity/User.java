@@ -16,6 +16,10 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+
 
 @Entity
 public class User implements Serializable{
@@ -31,18 +35,23 @@ public class User implements Serializable{
 	private long id;
 	
 	@Column
+	@NotBlank
 	private String name;
 	
 	@Column
+	@NotBlank
 	private String lastname;
 	
 	@Column
+	@NotBlank
 	private String email;
 	
 	@Column
+	@NotBlank
 	private String username;
 
 	@Column
+	@NotBlank
 	private String password;
 	
 	@Transient
